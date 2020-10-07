@@ -18,12 +18,6 @@
         font-weight: normal;
         text-decoration: none;
     }
-
-    img
-    {
-        height: 35px;
-        width: auto;
-    }
 }
 
 .nav_bar
@@ -45,5 +39,23 @@
     {
         font-size: 40px;
         font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    .site-header
+    {
+        li
+        {
+            margin-left: 15px;
+        }
+    }
+    #site-title
+    {
+        *
+        {
+            font-size: 30px;
+        }
     }
 }

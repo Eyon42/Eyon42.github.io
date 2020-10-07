@@ -15,7 +15,7 @@
     min-width: 250px;
     margin-left: 5px;
     padding-left: 10px;
-    border-left: 1px solid lightgray;
+    border-left: 1px solid $palette3;
     height: 100%;
     p
     {
@@ -28,4 +28,27 @@
     border-radius: 5px;
     width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 768px)
+{
+    .about-page
+    {
+        flex-direction: column;
+    }
+    .about-site
+    {
+        width: auto;
+    }
+
+    .about-me
+    {
+        border-top: 1px solid $palette3;;
+        border-left: 0px solid $palette3;
+        padding-top: 20px;
+        width: auto;
+        min-width: auto;
+        margin-left: 0;
+        padding-left: 0;
+    }
 }

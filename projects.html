@@ -20,26 +20,25 @@ permalink: /projects
             </h2>
             <p>{{ project.about }}</p>
             <div class="project-actions">
-                <ul>
-                    {% if project.demo_link != "" %}
-                        <div class="link-button">
-                            <li><a href="{{ project.demo_link }}">Demo</a></li>
-                        </div>
-                        
-                    {% endif %}
-                    {% if project.source_code_link  != "" %}
-                        <div class="link-button">
-                            <li><a href="{{ project.source_code_link }}">Source code</a></li>
-                        </div>
-                        
-                    {% endif %}
-                    {% if project.blog_link  != "" %}
-                        <div class="link-button">
-                            <li><a href="{{ project.blog_link }}">Blog Post</a></li>
-                        </div>
-                        
-                    {% endif %}
-                </ul>
+                
+                {% if project.demo_link != "" %}
+                    <div class="link-button">
+                        <a href="{{ project.demo_link }}">Demo</a>
+                    </div>
+                {% endif %}
+
+                {% if project.source_code_link  != "" %}
+                    <div class="link-button">
+                        <a href="{{ project.source_code_link }}">Source code</a>
+                    </div>
+                {% endif %}
+
+                {% if project.blog_link  != "" %}
+                    <div class="link-button">
+                        <a href="{{ project.blog_link }}">Blog Post</a>
+                    </div>
+                {% endif %}
+
             </div>
         </div>
     </div>

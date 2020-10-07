@@ -35,15 +35,35 @@
 
 .project-actions
 {
-    ul
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px)
+{
+    .project-img
+    {
+        width: auto;
+    }
+    .project-card
+    {
+        flex-direction: column;
+    }
+    .project-data
     {
         display: flex;
-        justify-content: space-evenly;
-        li
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        p
         {
-            display: inline;
+            width: 90%;
         }
     }
-    padding-bottom: 15px;
-    
+    .project-actions
+    {
+        display: flex;
+        align-self: stretch;
+    }
 }

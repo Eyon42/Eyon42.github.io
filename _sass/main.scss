@@ -103,3 +103,23 @@ body
 {
     text-align: center;
 }
+
+@media only screen and (max-width: 768px)
+{
+    .content
+    {
+        padding-bottom: $footer-height * 2 + 30px;
+    }
+
+    .link-button
+    {
+        padding: 8px;
+        background-color: $palette5;
+        a
+        {
+            color: $palette1;
+        }
+        border: $palette8;
+        box-shadow: 0 0 5px 0 $palette3;
+    }
+}

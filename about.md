@@ -11,6 +11,6 @@ Now this is the place where I put all of those things together.
 - Science and Engineering
 - Mathematics
 - Music
-- Languages (Trying to learn German)
+- Languages (Currently trying to learn German)
   
 This blog is about applying programming and Data Science to those topics.
