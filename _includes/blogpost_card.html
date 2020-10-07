@@ -1,0 +1,7 @@
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>        
+{% if post.layout == "project_blogpost" %}
+    {% assign project = site.data.projects | where: "name", post.project_name | first %}
+    {{ project.about}}
+{% else %}
+    {{ post.excerpt }}
+{% endif %}

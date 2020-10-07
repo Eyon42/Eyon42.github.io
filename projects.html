@@ -1,0 +1,46 @@
+---
+layout: default
+title: Projects
+permalink: /projects
+---
+
+<h1>My past projects:</h1>
+
+{% for project in site.data.projects %}
+    <div class="project-card">
+        <div class="project-img">
+            <a href={{ project.blog_link }}>
+            <img src={{ project.image }} alt="">
+            </a>
+        </div>
+
+        <div class="project-data">
+            <h2 class="center">
+                <a href="{{ project.blog_link }}">{{ project.name }}</a>
+            </h2>
+            <p>{{ project.about }}</p>
+            <div class="project-actions">
+                <ul>
+                    {% if project.demo_link != "" %}
+                        <div class="link-button">
+                            <li><a href="{{ project.demo_link }}">Demo</a></li>
+                        </div>
+                        
+                    {% endif %}
+                    {% if project.source_code_link  != "" %}
+                        <div class="link-button">
+                            <li><a href="{{ project.source_code_link }}">Source code</a></li>
+                        </div>
+                        
+                    {% endif %}
+                    {% if project.blog_link  != "" %}
+                        <div class="link-button">
+                            <li><a href="{{ project.blog_link }}">Blog Post</a></li>
+                        </div>
+                        
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endfor %}

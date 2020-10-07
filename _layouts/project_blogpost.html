@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign project = site.data.projects | where: "name", page.project_name | first %}
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date_to_string }}
+    {% if project.demo_link != "" %}
+         - <a href="{{ project.demo_link }}">Demo</a>
+    {% endif %}
+    {% if project.source_code_link  != "" %}
+         - <a href="{{ project.source_code_link }}">Source code</a>
+    {% endif %}
+
+<h2>{{ project.about }}</h2>
+
+<img src="{{ project.image }}" alt="">
+
+<div class="post-content">
+     {{ content }}
+</div>

@@ -1,0 +1,49 @@
+.site-header
+{
+    background-color: $palette5;
+    height: $header-height;
+    box-shadow: 0 0 10px 0 $palette6;
+    display: flex;
+    align-items: center;
+
+
+    li
+    {
+        margin-left: 40px;
+    }
+    
+    a
+    {
+        color: $palette1;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    img
+    {
+        height: 35px;
+        width: auto;
+    }
+}
+
+.nav_bar
+{
+    *
+    {
+        display: inline;
+    }  
+}
+
+#current-page
+{
+    color: $palette4;
+}
+
+#site-title
+{
+    *
+    {
+        font-size: 40px;
+        font-weight: 400;
+    }
+}

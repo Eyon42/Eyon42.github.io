@@ -1,0 +1,15 @@
+---
+layout: default
+title: Blog
+permalink: /blog
+---
+
+<h1>Post history</h1>
+
+<ul>
+    {% for post in site.posts %}
+      <li>
+        {% include blogpost_card.html %}
+      </li>
+    {% endfor %}
+</ul>

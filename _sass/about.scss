@@ -1,0 +1,31 @@
+.about-page
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-site
+{
+    width: 75%;
+}
+
+.about-me
+{
+    width: 25%;
+    min-width: 250px;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 1px solid lightgray;
+    height: 100%;
+    p
+    {
+        text-align: justify;
+    }
+}
+
+#profile-pic
+{
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}

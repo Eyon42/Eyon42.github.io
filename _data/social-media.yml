@@ -1,0 +1,19 @@
+- name: Youtube
+  link: https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw
+  icon: https://unpkg.com/simple-icons@latest/icons/youtube.svg
+
+- name: Github
+  link: https://github.com/Eyon42
+  icon: https://unpkg.com/simple-icons@latest/icons/github.svg
+
+- name: Instagram
+  link: https://www.instagram.com/the_eyon/
+  icon: https://unpkg.com/simple-icons@latest/icons/instagram.svg
+
+- name: Linked In
+  link: https://www.linkedin.com/in/francesco-gentile-907bb4165/
+  icon: https://unpkg.com/simple-icons@latest/icons/linkedin.svg
+
+- name: Xing
+  link: https://www.xing.com/profile/Francesco_Gentile13/cv
+  icon: https://unpkg.com/simple-icons@latest/icons/xing.svg

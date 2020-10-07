@@ -1,0 +1,45 @@
+.site-footer {
+    box-shadow: 0 0 10px 0 $palette3;
+    background-color: $palette2;
+    height: $footer-height;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+#email-contact
+{
+    a:hover
+    {
+        color: $palette5;
+    }
+    a
+    {
+        text-decoration: none;
+        color: $palette8;
+    }
+}
+
+.social-media
+{
+    li
+    {
+        display: inline;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+    
+    img
+    {
+        margin-left: 10px;
+        width: 20px;
+    }
+
+    img:hover 
+    {
+        opacity: 0.5;
+    }
+}

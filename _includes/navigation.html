@@ -1,0 +1,21 @@
+<header class="site-header">
+    <div class="wrapper">
+        <div id="site-title">
+            <a href="/">
+                Eyon
+            </a>
+        </div>
+
+        <nav class="nav_bar">
+            <ul>
+                {% for item in site.data.navigation %}
+                    <li>
+                        <a href="{{ item.link }}" {% if page.url == item.link %} id="current-page" {% endif %}>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

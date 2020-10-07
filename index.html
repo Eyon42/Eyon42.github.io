@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Home"
+---
+
+<h1>Recent Projects:</h1>
+{% for project in site.data.projects %}
+  {% if project.featured %}
+    <h2 class="center">
+      <a href="{{ project.blog_link }}">{{ project.name }}</a>
+    </h2>
+
+    <a href={{ project.blog_link }}>
+      <img class="featured-image" src={{ project.image }} alt="">
+    </a>
+  {% endif %}
+{% endfor %}
+
+<h1>Latest posts:</h1>
+
+<ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        {% include blogpost_card.html %}
+      </li>
+    {% endfor %}
+  </ul>
