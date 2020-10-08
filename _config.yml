@@ -1,1 +1,30 @@
 email: "francescogentyle@gmail.com"
+
+plugins:
+  - jekyll-seo-tag
+
+title: "Eyon"
+
+tagline: "A Data Science and Visualization blog."
+
+description: "A Data Science and Visualization blog with focus on Engineering, Music, Math and Languages. Francesco Gentile (Eyon) is an Industrial Engineering and Computer Science science student from Argentina."
+
+url: "https://eyon42.github.io"
+
+author:
+  name: "Francesco Gentile"
+  nickname: "Eyon"
+
+logo: "/assets/site_logo.png"
+
+social:
+  name: Francesco Gentile
+  links:
+    https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw
+    https://github.com/Eyon42
+    https://www.instagram.com/the_eyon/
+    https://www.linkedin.com/in/francesco-gentile-907bb4165/
+    https://www.xing.com/profile/Francesco_Gentile13/cv
+
+
+google-site-verification: google34dd0bedf44b57d0.html
