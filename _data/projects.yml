@@ -1,6 +1,6 @@
 - name: "Interactive Concept Map"
   featured: True
-  demo_link: "https://eyon42.github.io/InteractiveConceptMapGenerator/am_map.html"
+  demo_link: "https://eyon42.github.io/InteractiveConceptMapGenerator/output/map.html"
   blog_link: "/2020/09/18/Interactive-Concept-Map.html"
   source_code_link: "https://github.com/Eyon42/InteractiveConceptMapGenerator"
   image: "/assets/Images/InteractiveConceptMap.png"
