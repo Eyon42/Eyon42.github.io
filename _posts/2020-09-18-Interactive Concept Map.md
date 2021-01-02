@@ -39,4 +39,4 @@ Now the graph resizes responsively, so it can be viewed on mobile devices and sc
 
 Also, the code was reworked and reorganized and can now be used as a command line tool for easily creating HTML files containing the graphs.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allowfullscreen></iframe>
