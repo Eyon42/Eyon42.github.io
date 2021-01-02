@@ -5,7 +5,7 @@ project_name: "Musical notes distribution graphs"
 
 Recently i started to try and learn more songs on guitar by ear, an important part of doing that is learning which key is the song in. So i thought it would be usefull to see the distribution of the notes in the song to figure that out.
 
-I started looking up how could i get the note data and after looking at a bunch of different formats for storing music data I decided to first test with MIDI, as it is a pretty common format and had a [Well Documented library](https://mido.readthedocs.io/).
+I started looking up how could i get the note data and after looking at a bunch of different formats for storing music data I decided to first test with MIDI, as it is a pretty common format and had a [well documented library](https://mido.readthedocs.io/).
 
 After some reading and exploring in a Jupyter Notebook i wrote a couple functions to extract the note data and count it. Then i plotted the result with [Matplotlib](https://matplotlib.org/).
 
