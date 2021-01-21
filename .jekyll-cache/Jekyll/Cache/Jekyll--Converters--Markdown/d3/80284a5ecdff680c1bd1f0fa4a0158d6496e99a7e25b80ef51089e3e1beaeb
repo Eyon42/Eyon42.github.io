@@ -1,9 +1,0 @@
-I"�<p>About three year ago FiveThirtyEight published a short article called <a href="https://fivethirtyeight.com/features/is-your-dd-character-rare/">“Is Your D&amp;D Character Rare?”</a> which used a huge dataset of characters to make a table showing Class and race combinations per 100,000 characters created by players. Then a year later <a href="https://oganm.github.io/">Ogan Mancarci</a> remade the table and made a <a href="https://oganm.github.io/dndstats/">more in depth analysis</a> using a <a href="https://github.com/oganm/dndstats">dataset</a> of 885 character sheets. In the present, two years later, this dataset has grown to over 6000 character sheets. So my intention now is to recreate parts of this analysis and add a bit of my own.</p>
-
-<p>I’ve been playing Dungeons &amp; Dragons for about 2 years now. It’s a really fun game where the only limit is what you can imagine(And what the Dungeon Master allows).</p>
-
-<p>But even in such a world without limits, there must be some kind of order. The DM can have plans, notes and maps, but such things are worthless once your players decide to get creative and take a totally unexpected route. The player, on the other hand, has the <strong>character sheet</strong> which is probably the closest thing in the game that is relatively standarized and we can get useful data out of it.</p>
-
-<object type="text/html" data="/assets/Tables/D&amp;D_Class_race_table.html" class="table"></object>
-
-:ET
