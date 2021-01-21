@@ -4,7 +4,7 @@
   blog_link: "/2020/09/18/Interactive-Concept-Map.html"
   source_code_link: "https://github.com/Eyon42/InteractiveConceptMapGenerator"
   image: "/assets/Images/InteractiveConceptMap.png"
-  about: "A python script to generate interactive maps of concepts from a markdown file."
+  about: "A Python script to generate interactive maps of concepts from a markdown file."
 
 - name: "Musical notes distribution graphs"
   featured: False
@@ -12,6 +12,6 @@
   blog_link: "/2020/10/07/Musical-notes-distribution-graphs"
   source_code_link: "https://github.com/Eyon42/MIDI-Note-Analizer"
   image: "/assets/Images/4_song_plot.png"
-  about: "A python script that takes a midi file and plots the distribution of musical notes by instrument."
+  about: "A Python Jupyter Notebook that takes a midi file and plots the distribution of musical notes by instrument."
 
   

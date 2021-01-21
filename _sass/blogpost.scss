@@ -5,3 +5,19 @@
         text-align: justify;
     }
 }
+
+.table
+{
+    margin: auto;
+    width: 100%;
+    min-height: 50vh;
+    height: 100%;
+    padding-right: 10px;
+}
+@media only screen and (max-width: 768px)
+{
+    .table
+    {
+        min-height: 80vh;
+    }
+}

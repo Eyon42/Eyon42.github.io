@@ -1,5 +1,4 @@
-I"�
-<p>I started this project because i had to study for my final exam of mathematical analysis. I usually make big cheat sheets on paper with all the formulas and a summary of the concepts. But since this year I’ve been trying to make everything digital and keep no papers. Partly because i don’t really want to keep around all those papers but mostly because because the flexibility of a keyboard and a graphics tablet is unbeatable by paper. One of those advantages is the capacity to feed my notes into software to do stuff.</p>
+I"3<p>I started this project because i had to study for my final exam of mathematical analysis. I usually make big cheat sheets on paper with all the formulas and a summary of the concepts. But since this year I’ve been trying to make everything digital and keep no papers. Partly because i don’t really want to keep around all those papers but mostly because because the flexibility of a keyboard and a graphics tablet is unbeatable by paper. One of those advantages is the capacity to feed my notes into software to do stuff.</p>
 
 <p>I decided to write my notes in a markdown file with the following structure:</p>
 
@@ -26,5 +25,15 @@
 
 <p>Knowing all that I added a script that, on the selection of a node, assigned the content of an html div to the content of the node and used <a href="https://katex.org/">Katex</a> to format the math.</p>
 
-<p>And that was all, i had an interactive cheatsheet to keep studying for my exams. In the future i may come back to this project to make it more generalized and mobile friendly.</p>
+<p>And that was all, I had an interactive cheatsheet to keep studying for my exams. In the future i may come back to this project to make it more generalized and mobile friendly.</p>
+
+<h2 id="update-2020-12-29">Update (2020-12-29).</h2>
+
+<p>Now the graph resizes responsively, so it can be viewed on mobile devices and screens of all sizes.</p>
+
+<p>Also, the code was reworked and reorganized and can now be used as a command line tool for easily creating HTML files containing the graphs.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>(To access a demostration click on Demo at the top of the post)</p>
 :ET

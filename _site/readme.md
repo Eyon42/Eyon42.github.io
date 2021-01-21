@@ -2,4 +2,3 @@
 
 ## To-Do:
     - Add content
-    - Make mobile friendly

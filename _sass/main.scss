@@ -1,6 +1,6 @@
 .wrapper
 {
-    max-width: 125vh;
+    max-width: 1000px;
     width: 95%;
     margin: auto;
     display: flex;
@@ -106,6 +106,10 @@ body
 
 @media only screen and (max-width: 768px)
 {
+    .wrapper
+    {
+        max-width: auto;
+    }
     .content
     {
         padding-bottom: $footer-height * 2 + 30px;

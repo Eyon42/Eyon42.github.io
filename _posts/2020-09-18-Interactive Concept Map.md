@@ -31,7 +31,7 @@ So after a whole day of reading the docs a i learned how to extend the library t
 
 Knowing all that I added a script that, on the selection of a node, assigned the content of an html div to the content of the node and used [Katex](https://katex.org/) to format the math.
 
-And that was all, i had an interactive cheatsheet to keep studying for my exams. In the future i may come back to this project to make it more generalized and mobile friendly.
+And that was all, I had an interactive cheatsheet to keep studying for my exams. In the future i may come back to this project to make it more generalized and mobile friendly.
 
 ## Update (2020-12-29).
 
@@ -39,7 +39,7 @@ Now the graph resizes responsively, so it can be viewed on mobile devices and sc
 
 Also, the code was reworked and reorganized and can now be used as a command line tool for easily creating HTML files containing the graphs.
 
-<iframe src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 (To access a demostration click on Demo at the top of the post)
