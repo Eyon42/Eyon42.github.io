@@ -6,5 +6,7 @@
 ## Run instructions
 ```
 $ gem install bundler jekyll
+$ bundle install
+$ npm install // for tailwind css
 $ bundle exec jekyll serve
 ```

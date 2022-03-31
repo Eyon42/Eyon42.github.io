@@ -17,12 +17,13 @@
         {% seo %}
     </head>
     <body>
-        {% include navigation.html %}
-        <div class="wrapper">
-            <div class="content">
+        <div>
+            {% include navigation.html %}
+            <div class="container max-w-screen-xl flex flex-col mx-auto px-4 z-0">
                 {{ content }}
             </div>
+            {% include footer.html %}
         </div>
-        {% include footer.html %}
+
     </body>
 </html>

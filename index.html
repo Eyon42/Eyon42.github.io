@@ -3,25 +3,88 @@ layout: default
 title: "Home"
 ---
 
-<h1>Recent Projects:</h1>
-{% for project in site.data.projects %}
-  {% if project.featured %}
-    <h2 class="center">
-      <a href="{{ project.blog_link }}">{{ project.name }}</a>
-    </h2>
+<div id="ValueProp-CTA"
+  class="flex flex-col md:flex-row justify-around items-center md:h-screen transition-all duration-1000 grayscale select-none">
+  <div class="flex flex-col items-center md:items-baseline text-lg text-center md:text-left md:w-2/5">
+    <span>
+      <h1 class="md:text-3xl md:my-5"> Hi! I&#39;m Francesco Gentile</h1>
+      <h2 class="md:text-5xl md:mt-5 md:mb-1">I use <span id="animatedValueProp"
+          class="font-bold text-black0">Software</span> to </h2>
+      <h2 class="md:text-5xl md:mb-5 md:mt-1">solve real problems</h2>
+    </span>
+    <div class="flex flex-col md:flex-row justify-between w-full items-center md:items-baseline scale my-5 md:my-2">
+      <div>
+        <h2 class="text-sm">Let&#39;s solve something together</h2>
+      </div>
+      <div>
+        <button id="ctaButton" onclick="window.location.href='/#Contact'" class="bg-strongRed md:bg-primaryRed hover:rounded-3xl hover:bg-strongRed rounded-full  w-fit center py-4 md:py:0 px-24  text-xl text-white0 my-1
+        transition-all cursor-pointer ease-linear" href="/#Contact">Contact</button>
+      </div>
+    </div>
 
-    <a href={{ project.blog_link }}>
-      <img class="featured-image" src={{ project.image }} alt="">
-    </a>
-  {% endif %}
-{% endfor %}
+  </div>
+  <img class="rounded-full border-solid order-first md:order-last my-5 md:my-10 border w-10/12 md:w-auto"
+    src="https://avatars3.githubusercontent.com/u/38871879?s=400&u=2b89272ab8e51aa9c48fb04dce5788a390b1a29b&v=4"
+    alt="Picture of Francesco">
 
-<h1>Latest posts:</h1>
+  <script>
+    const button = document.getElementById("ctaButton")
+    const ctaPage = document.getElementById("ValueProp-CTA")
+    button.classList.add("scale-90")
+    setTimeout(() => {
+      document.getElementById("ValueProp-CTA").classList.remove("grayscale")
+      document.getElementById("ValueProp-CTA").classList.add("grayscale-0")
+      document.getElementById("ctaButton").classList.remove("scale-90")
+      document.getElementById("ctaButton").classList.add("scale-100")
+    }, 1000)
 
-<ul>
+    let techIndex = 1;
+    const techArray = ["Software", "Python", "Javascript", "Solidity"]
+    const techColors = ["text-black0", "text-[#5E7BA7]", "text-[#F0DA50]", "text-[#505050]"] // this have to be safelisted in the tailwind config file
+    const n = techArray.length
+    const valueProp = document.getElementById("animatedValueProp")
+    setInterval(() => {
+      valueProp.innerText = techArray[techIndex % n]
+      valueProp.classList.remove(techColors[(techIndex - 1) % n])
+      valueProp.classList.add(techColors[techIndex % n])
+      techIndex++;
+    }, 2500);
+  </script>
+</div>
+<div id="FeaturedProject" class="flex flex-col select-none md:h-screen mt-16 md:py0">
+  <h1 class="text-3xl text-center">Featured Projects</h1>
+  <div class="md:flex md:flex-wrap">
+    {% for project in site.data.projects %}
+    {% if project.featured %}
+    <div class="md:w-1/2 flex flex-col my-10 items-center">
+      <h2 class="text-2xl my-2 hover:text-strongRed text-center">
+        <a href="{{ project.blog_link }}">{{ project.name }}</a>
+      </h2>
+      <a href={{ project.blog_link }}>
+        <img class="" src={{ project.image }} alt="Featured project image">
+      </a>
+      <p class="md:text-xl text-center">{{ project.about }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div id="AboutMe">
+  Some info about me
+</div>
+
+<div id="Contact">
+  Some info about me
+</div>
+
+<div id="LatestBlogposts">
+  <h1>Latest posts:</h1>
+  <ul>
     {% for post in site.posts limit:3 %}
-      <li>
-        {% include blogpost_card.html %}
-      </li>
+    <li>
+      {% include blogpost_card.html %}
+    </li>
     {% endfor %}
   </ul>
+</div>

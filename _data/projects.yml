@@ -7,7 +7,7 @@
   about: "A Python script to generate interactive maps of concepts from a markdown file."
 
 - name: "Musical notes distribution graphs"
-  featured: False
+  featured: True
   demo_link: ""
   blog_link: "/2020/10/07/Musical-notes-distribution-graphs"
   source_code_link: "https://github.com/Eyon42/MIDI-Note-Analizer"
