@@ -8,9 +8,13 @@ module.exports = {
     ],
     darkMode: false,
     theme: {
+        fontFamily: {
+            'sans': ['Open Sans']
+        },
         extend: {
             colors: {
                 primaryRed: "#d64937",
+                strongRed: "#dc240c",
                 secondaryRed: "#df7568",
                 white0: "#ffffff",
                 white1: "#f8f9fa",
