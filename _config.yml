@@ -2,6 +2,10 @@ email: "francescogentyle@gmail.com"
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-postcss
+
+postcss:
+  cache: false
 
 title: "Eyon"
 
