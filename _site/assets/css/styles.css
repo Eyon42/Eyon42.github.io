@@ -316,8 +316,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 p{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 h1{
   padding-top: 1.5rem;
@@ -343,14 +343,14 @@ h3{
 h4{
   padding-top: 0.75rem;
   padding-bottom: 0.25rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
 }
 h5{
   padding-top: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 a{
   -webkit-text-decoration-line: underline;
@@ -616,6 +616,9 @@ a:hover{
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .cursor-pointer{
   cursor: pointer;
 }
@@ -756,6 +759,10 @@ a:hover{
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .font-medium{
   font-weight: 500;
@@ -992,10 +999,6 @@ a:hover{
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
   .md\:font-medium{
     font-weight: 500;
