@@ -1,0 +1,28 @@
+{
+  "name": "Eyon42.github.io",
+  "version": "1.0.0",
+  "description": "## To-Do:     - Add content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eyon42/Eyon42.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eyon42/Eyon42.github.io/issues"
+  },
+  "homepage": "https://github.com/Eyon42/Eyon42.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.5",
+    "postcss": "^8.4.12",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.23"
+  }
+}
