@@ -5,3 +5,47 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    p {
+        @apply my-2;
+    }
+    h1 {
+        @apply text-2xl font-bold pt-6 pb-2;
+    }
+    h2 {
+        @apply text-xl font-bold pt-5 pb-2;
+    }
+    h3 {
+        @apply text-lg font-bold pt-4 pb-1;
+    }
+    h4 {
+        @apply text-xl font-bold pt-3 pb-1;
+    }
+    h5 {
+        @apply text-xl pt-2;
+    }
+    a {
+        @apply underline hover:text-strongRed transition-all;
+    }
+}
+
+@layer components {
+    .ytp-cued-thumbnail-overlay {
+        @apply hidden;
+    }
+
+    .link-button {
+
+        @apply px-4 py-2 bg-primaryRed hover:bg-strongRed rounded-md text-white0 font-bold;
+    }
+
+    .link-button a {
+        @apply no-underline hover:text-white0;
+    }
+}
+    

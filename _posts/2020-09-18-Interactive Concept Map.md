@@ -1,6 +1,7 @@
 ---
 layout: project_blogpost
 project_name: "Interactive Concept Map"
+author: "Francesco Gentile"
 ---
 
 I started this project because i had to study for my final exam of mathematical analysis. I usually make big cheat sheets on paper with all the formulas and a summary of the concepts. But since this year I've been trying to make everything digital and keep no papers. Partly because i don't really want to keep around all those papers but mostly because because the flexibility of a keyboard and a graphics tablet is unbeatable by paper. One of those advantages is the capacity to feed my notes into software to do stuff.
@@ -39,7 +40,12 @@ Now the graph resizes responsively, so it can be viewed on mobile devices and sc
 
 Also, the code was reworked and reorganized and can now be used as a command line tool for easily creating HTML files containing the graphs.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="flex justify-around items-center py-10">
+    <iframe src="https://www.youtube.com/embed/hb3nmdTsLGA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    class="w-full max-w-2xl h-48 md:h-96"
+    ></iframe>
+</div>
+
 
 
 (To access a demostration click on Demo at the top of the post)

@@ -1,7 +1,10 @@
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>        
-{% if post.layout == "project_blogpost" %}
+<a href="{{ post.url }}" class="no-underline">
+    <span class="text-sm text-black2">{{ post.date | date_to_string }}</span>
+    <h2 class="text-2xl hover:text-strongRed pt-0">{{ post.title }}</h2>
+    {% if post.layout == "project_blogpost" %}
     {% assign project = site.data.projects | where: "name", post.project_name | first %}
-    {{ project.about}}
-{% else %}
-    {{ post.excerpt }}
-{% endif %}
+    <p class="text-sm">{{ project.about}}</p>
+    {% else %}
+    <p class="text-sm">{{ post.content | strip_html | truncatewords: 50 }}</p>
+    {% endif %}
+</a>

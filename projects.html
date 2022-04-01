@@ -4,42 +4,45 @@ title: Projects
 permalink: /projects
 ---
 
-<h1>My past projects:</h1>
-
-{% for project in site.data.projects %}
-    <div class="project-card">
-        <div class="project-img">
+<div class="flex flex-col mx-auto md:mt-8 h-max">
+    {% for project in site.data.projects %}
+    <div class="project-card flex flex-row text-center pb-5 mt-5 justify-between
+    {% if site.data.projects.last != project%}border-b{% endif %}">
+        <div class="project-img max-w-xs max-h-48">
             <a href={{ project.blog_link }}>
-            <img src={{ project.image }} alt="">
+                <img src={{ project.image }} alt="" class="object-cover w-full h-full">
             </a>
         </div>
 
-        <div class="project-data">
-            <h2 class="center">
-                <a href="{{ project.blog_link }}">{{ project.name }}</a>
+        <div class="project-data flex flex-col justify-between w-full">
+            <h2>
+                <a href="{{ project.blog_link }}" class="no-underline">{{ project.name }}</a>
             </h2>
-            <p>{{ project.about }}</p>
-            <div class="project-actions">
-                
+            <div class="w-3/4 mx-auto">
+                <p class="">{{ project.about }}</p>
+            </div>
+            <div class="project-actions flex flex-row justify-evenly">
+
                 {% if project.demo_link != "" %}
-                    <div class="link-button">
-                        <a href="{{ project.demo_link }}">Demo</a>
-                    </div>
+                <div class="link-button">
+                    <a href="{{ project.demo_link }}">Demo</a>
+                </div>
                 {% endif %}
 
-                {% if project.source_code_link  != "" %}
-                    <div class="link-button">
-                        <a href="{{ project.source_code_link }}">Source code</a>
-                    </div>
+                {% if project.source_code_link != "" %}
+                <div class="link-button">
+                    <a href="{{ project.source_code_link }}">Source code</a>
+                </div>
                 {% endif %}
 
-                {% if project.blog_link  != "" %}
-                    <div class="link-button">
-                        <a href="{{ project.blog_link }}">Blog Post</a>
-                    </div>
+                {% if project.blog_link != "" %}
+                <div class="link-button">
+                    <a href=" {{ project.blog_link }}" class="no-underline">Blog Post</a>
+                </div>
                 {% endif %}
 
             </div>
         </div>
     </div>
-{% endfor %}
+    {% endfor %}
+</div>

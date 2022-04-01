@@ -1,15 +1,30 @@
+- name: Instagram
+  link: https://www.instagram.com/the_eyon
+  icon: https://unpkg.com/simple-icons@latest/icons/instagram.svg
+  description: "I'm most active here. I usually post stories of what books I'm reading or when I manage to fix a bug at 3AM. Event photos also go here."
+
+- name: Twitter
+  link: https://twitter.com/TheEyon
+  icon: https://unpkg.com/simple-icons@latest/icons/twitter.svg
+  description: "I'm trying to use it a bit more to build a precence in the crypto-twitter space."
+
 - name: Youtube
   link: https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw
   icon: https://unpkg.com/simple-icons@latest/icons/youtube.svg
+  description: "Project demos, stream recordings and old videos playing guitar and making animations. I might start vlogging or doing tutorials here."
+
+- name: Twitch
+  link: https://www.twitch.tv/eyon_42
+  icon: https://unpkg.com/simple-icons@latest/icons/twitch.svg
+  description: "I stream, sometimes. Coding and Rimworld."
+
 
 - name: Github
   link: https://github.com/Eyon42
   icon: https://unpkg.com/simple-icons@latest/icons/github.svg
+  description: "Here lie all my projects, most them abandoned, but I'm proud of the few that are finished."
 
 - name: Linked In
   link: https://www.linkedin.com/in/francesco-gentile-907bb4165/
   icon: https://unpkg.com/simple-icons@latest/icons/linkedin.svg
-
-- name: Xing
-  link: https://www.xing.com/profile/Francesco_Gentile13/cv
-  icon: https://unpkg.com/simple-icons@latest/icons/xing.svg
+  description: "In case you want to talk about work"

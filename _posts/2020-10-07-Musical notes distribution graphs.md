@@ -1,6 +1,7 @@
 ---
 layout: project_blogpost
 project_name: "Musical notes distribution graphs"
+author: "Francesco Gentile"
 ---
 
 Recently i started to try and learn more songs on guitar by ear. An important part of doing that is learning which key is the song in. So I thought it would be useful to see the distribution of the notes in the song to figure that out.

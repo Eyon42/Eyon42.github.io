@@ -4,12 +4,13 @@ title: Blog
 permalink: /blog
 ---
 
-<h1>Post history</h1>
-
-<ul>
+<div class="flex flex-col items-center md:mt-16 h-max">
+  <!-- <h1 class="text-3xl text-center">Post history</h1> -->
+  <ul class="my-2 md:my-4 md:w-3/5">
     {% for post in site.posts %}
-      <li>
-        {% include blogpost_card.html %}
-      </li>
+    <li class="my-4">
+      {% include blogpost_card.html %}
+    </li>
     {% endfor %}
-</ul>
+  </ul>
+</div>

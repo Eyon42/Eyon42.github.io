@@ -1,15 +1,12 @@
-<footer class="site-footer">
-    <div class="wrapper">
-        <div id="email-contact">
-            <p>
-                Contact: <a href="mailto:{{ site.email }}" title="Email">{{ site.email }}</a>
-            </p>
-        </div>
-        <div class="social-media">
+<footer class="flex flex-col items-center mt-10 text-black2">
+    <div class="md:w-1/3 flex flex-col items-center">
+        <span class="my-1">Francesco Gentile 2022</span>
+        <span class="my-1">Contact: <a href="mailto:{{ site.email }}" class="no-underline"title="Email">{{ site.email }}</a></span>
+        <div class="flex flex-row justify-evenly w-full my-2">
             {% for profile in site.data.social-media %}
             <div>
                 <a href="{{ profile.link }}">
-                    <img class="media-icon" src={{ profile.icon }} alt={{ profile.name }} title={{ profile.name }}>
+                    <img class="w-10" src={{ profile.icon }} alt={{ profile.name }} title={{ profile.name }}>
                 </a>
             </div>
             {% endfor %}

@@ -1,4 +1,4 @@
-<header class="bg-white0 select-none {% if page.url == "/" %} md:absolute top-0 w-screen z-50 {% endif %}">
+<header class="bg-white0 select-none {% if page.url == "/" %} md:absolute top-0 w-full z-50 {% endif %}">
     <script>
         function toggleMobileMenu() {
             var x = document.getElementById("mobile-menu");
@@ -11,8 +11,8 @@
     </script>
     <div class="container max-w-screen-xl flex flex-wrap justify-between items-center mx-auto border-b-2 px-4 py-4 sm:px-4">
         <div id="site-title" class="flex items-center">
-            <a href="/">
-                <span class="text-3xl text-black0 hover:text-strongRed self-center font-semibold whitespace-nowrap">Eyon</span>
+            <a href="/" class="no-underline">
+                <span class="text-3xl text-black0 self-center font-semibold whitespace-nowrap hover:text-strongRed transition-all">Eyon</span>
             </a>
         </div>
         <button onclick="toggleMobileMenu()"type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -26,9 +26,9 @@
                     <li>
                         <a class="
                         {% if page.url == item.link %} text-primaryRed {%else%} text-black0 {% endif %}
-                        text-lg hover:text-strongRed
+                        text-lg transition-all
                         block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
-                        md:hover:bg-transparent md:border-0  md:p-0
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
                         "
                         href="{{ item.link }}">
                             {{ item.name }}
