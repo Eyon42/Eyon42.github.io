@@ -12,6 +12,7 @@ Ignore the rest of this readme.
     - Add multilingual support
     - Translate posts
     - Write project posts for previous projects
+    - Change text highlight color to red
 
 ## Run instructions
 ```
