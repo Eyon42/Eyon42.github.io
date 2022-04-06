@@ -1,11 +1,12 @@
 ---
+title: My first Blockchain hackathon
 layout: blogpost
 author: "Francesco Gentile"
 ---
 
-Last week I participated on Eth global's LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write a single line of code. I think I wasn't yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving alone during the vacations. So in march I set myself a goal of earning for the month (That's a good thing about being a freelancer, you're limited only by how much you can work and how well you sell that work).
+Last week I participated on Eth global's LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write code. I think I wasn't yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving during the vacations. So in march I set myself a goal of earning for the month (That's a good thing about being a freelancer, you're limited only by how much you can work and how well you sell that work).
 
-During this month I finished a [loooong solidity course](https://www.youtube.com/watch?v=M576WGiDBdQ) I had been taking since January, dove a little deeper into frotende technologies with React.js and tried to get more confortable with development tools. I learned how to setup a simple react app with webpack and babel (without create-react-app) and made a few simple token projects with Brownie, the most advance being a custom ERC-721 (NFT) with a frontend which I still have to finish but it taught me how to integrate Brownie (Python) with a React.js project and gave me my fist experience with ethers.js.
+During this month I finished a [loooong solidity course](https://www.youtube.com/watch?v=M576WGiDBdQ) I had been taking since January, dove a little deeper into frotend technologies with React.js and tried to get more confortable with development tools. I learned how to setup a simple react app with webpack and babel (without create-react-app) and made a few simple token projects with Brownie, the most advance being a custom ERC-721 (NFT) with a frontend which I still have to finish but it taught me how to integrate Brownie (Python) with a React.js project and gave me my fist experience with ethers.js.
 
 This hackathon was a bit different in that it required staking some ETH to participate. So this time, if I didn't submit any project, I would lose money. Perhaps a little commitment device was all I needed.
 

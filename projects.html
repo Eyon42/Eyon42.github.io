@@ -6,22 +6,22 @@ permalink: /projects
 
 <div class="flex flex-col mx-auto md:mt-8 h-max">
     {% for project in site.data.projects %}
-    <div class="project-card flex flex-row text-center pb-5 mt-5 justify-between
-    {% if site.data.projects.last != project%}border-b{% endif %}">
-        <div class="project-img max-w-xs max-h-48">
+    <div class="flex flex-col md:flex-row text-center pb-5 mt-5 justify-between
+            {% if site.data.projects.last != project%}border-b{% endif %}">
+        <div class="max-h-48 select-none md:w-1/3 lg:w-1/4 items-center">
             <a href={{ project.blog_link }}>
-                <img src={{ project.image }} alt="" class="object-cover w-full h-full">
+                <img src={{ project.image }} alt="{{ project.name }}" class="object-cover w-full h-full inline-block">
             </a>
         </div>
 
-        <div class="project-data flex flex-col justify-between w-full">
+        <div class="flex flex-col justify-between w-full md:w-2/3 lg:w-3/4">
             <h2>
                 <a href="{{ project.blog_link }}" class="no-underline">{{ project.name }}</a>
             </h2>
             <div class="w-3/4 mx-auto">
                 <p class="">{{ project.about }}</p>
             </div>
-            <div class="project-actions flex flex-row justify-evenly">
+            <div class="flex flex-col sm:flex-row justify-evenly select-none">
 
                 {% if project.demo_link != "" %}
                 <div class="link-button">

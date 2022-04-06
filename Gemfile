@@ -10,4 +10,5 @@ gem 'jekyll-seo-tag', '~> 2.6', '>= 2.6.1'
 
 group :jekyll_plugins do
     gem 'jekyll-postcss'
+    gem 'jekyll-sitemap'
 end

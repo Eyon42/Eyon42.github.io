@@ -40,8 +40,7 @@
     }
 
     .link-button {
-
-        @apply px-4 py-2 bg-primaryRed hover:bg-strongRed rounded-md text-white0 font-bold;
+        @apply px-4 py-2 bg-primaryRed hover:bg-strongRed rounded-md text-white0 font-bold my-1 sm:mx-auto;
     }
 
     .link-button a {
