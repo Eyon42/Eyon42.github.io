@@ -119,7 +119,7 @@ The solution to this is a custom `launch.json` file int the `.vscode` folder. Th
 
 Breaking it down a bit, the configuration is very similar to the default Python debug configuration. The main changes are the `program` and the `args`.
 
-The program is the `brownie` command line python script, which you can find using `whereis brownie` (You'd only need to find it in case you didn't install it on a venv).
+The program is the `brownie` command line python script, which you can find using `$ whereis brownie` (You'd only need to find it in case you didn't install it on a venv).
 
 Then there is the arguments array which is just `run` and the current file.
 
