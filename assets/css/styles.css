@@ -32,11 +32,20 @@
     a {
         @apply underline hover:text-strongRed transition-all;
     }
+
+    code {
+        /* This only will affect inline code*/
+        @apply bg-white2;
+    }
 }
 
 @layer components {
     .ytp-cued-thumbnail-overlay {
         @apply hidden;
+    }
+
+    div.highlighter-rouge {
+        @apply overflow-x-auto border-2 max-w-xs;
     }
 
     .link-button {
