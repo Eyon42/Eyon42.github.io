@@ -1,5 +1,4 @@
 ---
-
 ---
 
 @import "tailwindcss/base";
@@ -11,49 +10,52 @@
 @tailwind utilities;
 
 @layer base {
-    p {
-        @apply my-4;
-    }
-    h1 {
-        @apply text-2xl font-bold pt-6 pb-2;
-    }
-    h2 {
-        @apply text-xl font-bold pt-5 pb-2;
-    }
-    h3 {
-        @apply text-lg font-bold pt-4 pb-1;
-    }
-    h4 {
-        @apply text-lg font-bold pt-3 pb-1;
-    }
-    h5 {
-        @apply text-base pt-2;
-    }
-    a {
-        @apply underline hover:text-strongRed transition-all;
-    }
+  p {
+    @apply my-4;
+  }
+  h1 {
+    @apply text-2xl font-bold pt-6 pb-2;
+  }
+  h2 {
+    @apply text-xl font-bold pt-5 pb-2;
+  }
+  h3 {
+    @apply text-lg font-bold pt-4 pb-1;
+  }
+  h4 {
+    @apply text-lg font-bold pt-3 pb-1;
+  }
+  h5 {
+    @apply text-base pt-2;
+  }
+  a {
+    @apply underline hover:text-strongRed transition-all;
+  }
 
-    code {
-        /* This only will affect inline code*/
-        @apply bg-white2;
-    }
+  code {
+    /* This only will affect inline code*/
+    @apply bg-white2;
+  }
+
+  blockquote {
+    @apply mx-2 px-4 py-2 border-l-4 border-strongRed bg-white1;
+  }
 }
 
 @layer components {
-    .ytp-cued-thumbnail-overlay {
-        @apply hidden;
-    }
+  .ytp-cued-thumbnail-overlay {
+    @apply hidden;
+  }
 
-    div.highlighter-rouge {
-        @apply overflow-x-auto border-2 max-w-xs;
-    }
+  div.highlighter-rouge {
+    @apply overflow-x-auto border-2 max-w-xs;
+  }
 
-    .link-button {
-        @apply px-4 py-2 bg-primaryRed hover:bg-strongRed rounded-md text-white0 font-bold my-1 sm:mx-auto;
-    }
+  .link-button {
+    @apply px-4 py-2 bg-primaryRed hover:bg-strongRed rounded-md text-white0 font-bold my-1 sm:mx-auto;
+  }
 
-    .link-button a {
-        @apply no-underline hover:text-white0;
-    }
+  .link-button a {
+    @apply no-underline hover:text-white0;
+  }
 }
-    

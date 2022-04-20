@@ -15,5 +15,6 @@ Ignore the rest of this readme.
 $ gem install bundler jekyll
 $ bundle install
 $ npm install // for tailwind css
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --host 0.0.0.0 --livereload
 ```
+add `-D` flag for drafts

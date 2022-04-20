@@ -17,7 +17,22 @@ Then, the nex day, hacking started.
 
 ## [DAO Hacks](https://dao.ethglobal.com)
 
-### What is a Dao
+### What is a DAO
+Before starting with activities specific  to the hackathon, we faced the challenge of aligning ourselves with the concept of a DAO.
+
+Part of this challenge's difficulties was setting the limits of what is considered a DAO and what isn't.
+
+This led us to generate a large number of questions and doubts before going to the technical answers. The interesting thing about this question brainstorming process is that it helped us to identify what we currently knew as a team.
+
+So specifically, what? is it a DAO?
+
+A DAO, as its acronym indicates, is an autonomous decentralized organization. According to the Etherum page, it explains that DAOs are an efficient and secure way to work with like-minded people around the world.
+
+After this exploration, we focused on looking for different examples of DAOs that are currently in operation and what their internal protocols were specifically.
+
+An example to understand the operation and foundations of a DAO is to consider a community or business whose specific objective that they pursue together can be achieved through collaboration through the Internet, which collectively belongs to and is managed by its members.
+
+To close this part of the process we decided to focus on the process of problem identification and solution for the Hackathon.
 
 ## The project
 

@@ -1,0 +1,5 @@
+{% if site.data.author_pages[author] %}
+<a href="{{ site.data.author_pages[author] }}">{{ author }}</a>
+{% else %}
+{{ author }}
+{% endif %}
