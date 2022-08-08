@@ -1,12 +1,12 @@
 - name: Instagram
-  link: https://www.instagram.com/the_eyon
+  link: https://www.instagram.com/eyon.dev
   icon: https://unpkg.com/simple-icons@latest/icons/instagram.svg
   description: "I'm most active here. I usually post stories of what books I'm reading or when I manage to fix a bug at 3AM. Event photos also go here."
 
 - name: Twitter
-  link: https://twitter.com/TheEyon
+  link: https://twitter.com/eyondev
   icon: https://unpkg.com/simple-icons@latest/icons/twitter.svg
-  description: "I'm trying to use it a bit more to build a precence in the crypto-twitter space."
+  description: "I'm trying to use it a bit more to build a presence in the crypto-twitter space."
 
 - name: Youtube
   link: https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw
@@ -17,7 +17,6 @@
   link: https://www.twitch.tv/eyon_42
   icon: https://unpkg.com/simple-icons@latest/icons/twitch.svg
   description: "I stream, sometimes. Coding and Rimworld."
-
 
 - name: Github
   link: https://github.com/Eyon42

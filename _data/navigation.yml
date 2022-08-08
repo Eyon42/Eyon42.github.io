@@ -4,5 +4,5 @@
   link: /blog
 - name: Contact
   link: \#Contact
-- name: Projects
-  link: /projects
+# - name: Projects
+# link: /projects
