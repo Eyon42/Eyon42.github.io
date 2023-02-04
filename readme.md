@@ -12,7 +12,7 @@ Ignore the rest of this readme.
 
 ## Run instructions
 ```
-$ gem install bundler jekyll
+$ gem install bundler
 $ bundle install
 $ npm install // for tailwind css
 $ bundle exec jekyll serve --host 0.0.0.0 --livereload
