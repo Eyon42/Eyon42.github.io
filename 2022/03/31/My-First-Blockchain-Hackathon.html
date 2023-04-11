@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <title>
+        Eyon | My first Blockchain hackathon
+    </title>
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/vs.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/code.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <meta name="google-site-verification" content="zG4KwhctHPDPuoQjjKFaP_KE7x_TeOeTBUtvOyNWpaE" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>My first Blockchain hackathon | Eyon</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="My first Blockchain hackathon" />
+<meta name="author" content="Francesco Gentile" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Last week I participated on Eth global’s LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write code. I think I wasn’t yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving during the vacations. So in march I set myself a goal of earning for the month (That’s a good thing about being a freelancer, you’re limited only by how much you can work and how well you sell that work)." />
+<meta property="og:description" content="Last week I participated on Eth global’s LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write code. I think I wasn’t yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving during the vacations. So in march I set myself a goal of earning for the month (That’s a good thing about being a freelancer, you’re limited only by how much you can work and how well you sell that work)." />
+<link rel="canonical" href="https://eyon42.github.io/2022/03/31/My-First-Blockchain-Hackathon.html" />
+<meta property="og:url" content="https://eyon42.github.io/2022/03/31/My-First-Blockchain-Hackathon.html" />
+<meta property="og:site_name" content="Eyon" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-31T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://eyon42.github.io/2022/03/31/My-First-Blockchain-Hackathon.html","headline":"My first Blockchain hackathon","dateModified":"2022-03-31T00:00:00-05:00","datePublished":"2022-03-31T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://eyon42.github.io/2022/03/31/My-First-Blockchain-Hackathon.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://eyon42.github.io/assets/site_logo.png"},"name":"Francesco Gentile"},"author":{"@type":"Person","name":"Francesco Gentile"},"@type":"BlogPosting","description":"Last week I participated on Eth global’s LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write code. I think I wasn’t yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving during the vacations. So in march I set myself a goal of earning for the month (That’s a good thing about being a freelancer, you’re limited only by how much you can work and how well you sell that work).","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+    <div class="selection:text-white0 selection:bg-primaryRed">
+        <header class="bg-white0 select-none ">
+    <script>
+        function toggleMobileMenu() {
+            var x = document.getElementById("mobile-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        } 
+    </script>
+    <div class="container max-w-screen-xl flex flex-wrap justify-between items-center mx-auto border-b-2 px-4 py-4 sm:px-4">
+        <div id="site-title" class="flex items-center">
+            <a href="/" class="no-underline">
+                <span class="text-3xl text-black0 self-center font-semibold whitespace-nowrap hover:text-strongRed transition-all">Eyon</span>
+            </a>
+        </div>
+        <button onclick="toggleMobileMenu()"type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        <nav class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="\#AboutMe">
+                            About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="/blog">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="\#Contact">
+                            Contact
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+        <div class="container max-w-screen-xl flex flex-col mx-auto px-4 z-0">
+            <div class="flex flex-col items-center mt-8 w-full md:w-3/5 mx-auto">
+    <h1 class="text-3xl text-center">My first Blockchain hackathon</h1>
+    <span class="text-sm text-black2">
+        31 Mar 2022
+        
+            
+             - 
+<a href="/#AboutMe">Francesco Gentile</a>
+
+        
+    </span>
+    <div class="post-content mt-10 container text-base">
+        <p>Last week I participated on Eth global’s LFGrow hackathon. I had been keeping an eye on Web3 hackathons for a couple months. I had even signed up for a 2-weeks Git coin hackathon in early February, but I never sat down to write code. I think I wasn’t yet comfortable enough with the technology and had also been having a hard time getting started with work in general after moving during the vacations. So in march I set myself a goal of earning for the month (That’s a good thing about being a freelancer, you’re limited only by how much you can work and how well you sell that work).</p>
+
+<p>During this month I finished a <a href="https://www.youtube.com/watch?v=M576WGiDBdQ">loooong solidity course</a> I had been taking since January, dove a little deeper into frotend technologies with React.js and tried to get more confortable with development tools. I learned how to setup a simple react app with webpack and babel (without create-react-app) and made a few simple token projects with Brownie, the most advance being a custom ERC-721 (NFT) with a frontend which I still have to finish but it taught me how to integrate Brownie (Python) with a React.js project and gave me my fist experience with ethers.js.</p>
+
+<p>This hackathon was a bit different in that it required staking some ETH to participate. So this time, if I didn’t submit any project, I would lose money. Perhaps a little commitment device was all I needed.</p>
+
+<h2 id="the-hackathon">The Hackathon</h2>
+
+<p><img src="/assets/Images/LFGrow.png" alt="LFGrow" /></p>
+
+<p>Before the hackathon, there were team-formation activities on Thursday and Friday. Here I had te opportunity to speak and get to know other participants. These days I talked with various teams, discussed ideas and shared experience until on Saturday I decided to settle down with the <strong><a href="https://showcase.ethglobal.com/lfgrow/memedao-jzss6">MemeDao</a></strong> team.</p>
+
+<p><img src="/assets/Images/LFGrowTeam.png" alt="(Part of) The team" /></p>
+
+<p>The main requirement for projects was that they had to use the main sponsor’s technology (Using other sponsor’s tech, like Chainlink, was optional and made you eligible to win secondary prizes). That sponsor was the <strong><a href="https://lens.dev/">Lens Protocol</a></strong>, a project by the team behind <a href="https://aave.com">Aave</a>. In short, Lens is a decentralized social graph protocol that serves as a shared data layer for multiple applications. This means that if you create a new application based on Lens you don’t have to start from scratch, instead you are able to leverage the existing users and content from any other platform that also runs on lens, making the whole ecosystem much more dynamic and decentralized.</p>
+
+<h2 id="the-project-memedao">The Project: MemeDAO</h2>
+
+<h3 id="project-page"><a href="https://showcase.ethglobal.com/lfgrow/memedao-jzss6">Project Page</a></h3>
+<p><a href="https://showcase.ethglobal.com/lfgrow/memedao-jzss6"><img src="/assets/Images/LFGProjectScreen.png" alt="Project Page" /></a></p>
+
+<p>We had decided to make a Meme curation tool based on the Lens Protocol. In short, we created a smart contract that holds a Lens Profile NFT and runs on a 24 hr cycle set by <a href="https://keepers.chain.link/">Chainlink keepers</a>. The cycle was the following:</p>
+<ul>
+  <li>A private meme request post is published by the Smart Contract.</li>
+  <li>Members of the dao post memes in response to the request.</li>
+  <li>Members vote on their favorite memes</li>
+  <li>A the end of the day the most liked meme is chosen and published to the open public.</li>
+  <li>That publication is open for collect (minting an NFT of the publication) in an auction, which is open for a whole cycle.</li>
+  <li>When the cycle closes, the winner of the auction is able to collect the post and a new request is posted by the Smart Contract.</li>
+</ul>
+
+<p>Surprisingly, we managed to implement everything… on the back-end. We had some “Human Resources problems”. At the beginning we were a team of four where only two of us were coders (Both back-end). So we went recruiting and found a front-end developer, which after two days of trying to set up their dev environment and get them familiar with Lens, was called for a work trip and had to leave the team :(. Then we got a replacement, he did an awesome job, but didn’t have much time as he had to work full-time and joined on Wednesday. In that time he managed to build the whole front-end functioning. But it was with mock data, because the back-end took some time to be finished and it was his first experience with ethers.js to connect directly to the blockchain from the browser. Going back to the back-end, the other dev tried really hard to do his best, but time zones made collaboration difficult and we weren’t able to get him up to date on the current development so he decided to leave the team.</p>
+
+<h2 id="the-technical-details-you-can-skip-this">The technical details (You can skip this)</h2>
+
+<h3 id="github-repo"><a href="https://github.com/Eyon42/MemeDAO">Github Repo</a></h3>
+<p><a href="https://github.com/Eyon42/MemeDAO"><img src="/assets/Images/LFGrowGithubPage.png" alt="Github Repo" /></a></p>
+
+<p>As I mentioned earlier, we started implementing a Smart Contract that holds the profile and does some basic actions. But most of what we needed to do wasn’t already implemented on the Lens Protocol. Luckily, the protocol supports custom modules for the “follow”, “reference” and “collect” actions, So we went ahead and wrote all modules that were needed.</p>
+
+<h3 id="modules-written">Modules Written:</h3>
+<h4 id="twowayreferencemodule"><a href="https://github.com/Eyon42/MemeDAO/blob/main/contracts/core/modules/reference/TwoWayReferenceModule.sol">TwoWayReferenceModule</a></h4>
+<p>The Lens Protocol doesn’t have a way to natively get all of the publication that reference a given publication. We implemented this module (and made it easy to incorporate into other modules) for that exact reason.</p>
+
+<h4 id="reactionsmodule"><a href="https://github.com/Eyon42/MemeDAO/blob/main/contracts/core/modules/reference/ReactionsModule.sol">ReactionsModule</a></h4>
+<p>Based on TwoWayReferenceModule, it adds a function to count comments with a determinated contentURI. This way we can set up a standard for our app where, for example, if the comment has <code class="language-plaintext highlighter-rouge">contentURI="\like"</code> then that’s counted as a like.
+As this module only adds view functionallity, we also made it available as a <a href="https://github.com/Eyon42/MemeDAO/blob/main/contracts/libraries/Reactions.sol">library</a> to extend reading a current TwoWayReferenceModule</p>
+
+<h4 id="auctioncollectmodule"><a href="https://github.com/Eyon42/MemeDAO/blob/main/contracts/core/modules/collect/AuctionCollectModule.sol">AuctionCollectModule</a></h4>
+<p>Allows people to post bids to an auction (they have to approve the module as spender for the bid amount). Then when the auction is closed, the highest bidder is charged (if someones withdraws their allowance before closing they are no longer eligible) and is then able to collect their nft. Mirrors can’t be collected (users can still bid, but the frontend shouldn’t give them the option).</p>
+
+<h4 id="twotierfollowmodule"><a href="https://github.com/Eyon42/MemeDAO/blob/main/contracts/core/modules/follow/TwoTierFollowModule.sol">TwoTierFollowModule</a></h4>
+<p>Allows followers to include a “member” flag in the call to follow. This charges them a fee and adds them to the module’s storage as a member of the profile. A whitelist could be implemented.</p>
+
+<h2 id="the-lessons">The Lessons</h2>
+
+<p>I learned <strong>A LOT</strong> this hackathon.</p>
+
+<p>It it the biggest blockchain project I’ve made so far. I used many new tools and had the opportunity to lead the team from a technical side (Originally I wanted to find someone experienced to follow, but I got tired of waiting and ended up having to take leadership to make things move forward)</p>
+
+<p>I still have a lot to learn and I left a little list of those things in the README.md file of the <a href="https://github.com/Eyon42/MemeDAO#to-learn">repo</a></p>
+
+<h2 id="prizes">Prizes</h2>
+
+<p>Last Wednesday was the closing ceremony where winners were announced. Twelve finalist were selected, we notice that the common factor in all of them was a well integrated end to end demo, so it’s clear why we didn’t win and where we should focus for the next hackathon.</p>
+
+<p>But, we did win the “Composable content” category prize, and the “Best Project that uses Chainlink” so I think that’s a good signal to keep moving forwards.</p>
+
+<p><img src="/assets/Images/LFGrowWinner.png" alt="Prizes" /></p>
+
+<h2 id="the-future">The Future</h2>
+<p>On our README.md on the project’s <a href="https://github.com/Eyon42/MemeDAO#to-learn">repo</a> we left a long list of TO-DO’s for the development. But besides that are going to continue working on the project to transform it into a tool that makes the experience of publishing in the Lens Protocol much more easier and straight-forwards for DAOs. We are also in communication with the Lens team and other teams building front-ends for the protocol to make sure that our developments integrate well and create synergy with the rest of the ecosystem.</p>
+
+<p>Now the next steps are the DAO Hacks hackathon next week and, if ticket prices allow it, Eth Amsterdam at the end of the month.</p>
+
+    </div>
+    
+</div>
+
+        </div>
+        <footer class="flex flex-col items-center mt-10 text-black2">
+    <div class="md:w-1/3 flex flex-col items-center">
+        <span class="my-1">Francesco Gentile 2022</span>
+        <span class="my-1">Contact: <a href="mailto:francescogentyle@gmail.com" class="no-underline"title="Email">francescogentyle@gmail.com</a></span>
+        <div class="flex flex-row justify-evenly w-full my-2 select-none">
+            
+            <div>
+                <a href="https://www.instagram.com/eyon.dev">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/instagram.svg alt=Instagram title=Instagram>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://twitter.com/eyondev">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/twitter.svg alt=Twitter title=Twitter>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/youtube.svg alt=Youtube title=Youtube>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.twitch.tv/eyon_42">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/twitch.svg alt=Twitch title=Twitch>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://github.com/Eyon42">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/github.svg alt=Github title=Github>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.linkedin.com/in/francesco-gentile-907bb4165/">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/linkedin.svg alt=Linked In title=Linked In>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <title>
+        Eyon | Using google Apps Script to create a ticketing system
+    </title>
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/vs.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/code.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <meta name="google-site-verification" content="zG4KwhctHPDPuoQjjKFaP_KE7x_TeOeTBUtvOyNWpaE" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using google Apps Script to create a ticketing system | Eyon</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Using google Apps Script to create a ticketing system" />
+<meta name="author" content="Francesco Gentile" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have been involved in the organization of several entrepreneurship, tech and web3 events over the last years. Usually most of them on a small budget where paying for a ticketing system was not an option. The most popular option for teams in these settings is to just use Google Forms for inscription and handle the payment manually through messages over email or WhatsApp. This is a very manual process and it is not very scalable. I have been looking for a solution to automate this process for a while and I finally found a way to do it with Google Apps Script." />
+<meta property="og:description" content="I have been involved in the organization of several entrepreneurship, tech and web3 events over the last years. Usually most of them on a small budget where paying for a ticketing system was not an option. The most popular option for teams in these settings is to just use Google Forms for inscription and handle the payment manually through messages over email or WhatsApp. This is a very manual process and it is not very scalable. I have been looking for a solution to automate this process for a while and I finally found a way to do it with Google Apps Script." />
+<link rel="canonical" href="https://eyon42.github.io/2023/01/06/AppsScriptAndMP.html" />
+<meta property="og:url" content="https://eyon42.github.io/2023/01/06/AppsScriptAndMP.html" />
+<meta property="og:site_name" content="Eyon" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-06T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://eyon42.github.io/2023/01/06/AppsScriptAndMP.html","headline":"Using google Apps Script to create a ticketing system","dateModified":"2023-01-06T00:00:00-06:00","datePublished":"2023-01-06T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://eyon42.github.io/2023/01/06/AppsScriptAndMP.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://eyon42.github.io/assets/site_logo.png"},"name":"Francesco Gentile"},"author":{"@type":"Person","name":"Francesco Gentile"},"@type":"BlogPosting","description":"I have been involved in the organization of several entrepreneurship, tech and web3 events over the last years. Usually most of them on a small budget where paying for a ticketing system was not an option. The most popular option for teams in these settings is to just use Google Forms for inscription and handle the payment manually through messages over email or WhatsApp. This is a very manual process and it is not very scalable. I have been looking for a solution to automate this process for a while and I finally found a way to do it with Google Apps Script.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+    <div class="selection:text-white0 selection:bg-primaryRed">
+        <header class="bg-white0 select-none ">
+    <script>
+        function toggleMobileMenu() {
+            var x = document.getElementById("mobile-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        } 
+    </script>
+    <div class="container max-w-screen-xl flex flex-wrap justify-between items-center mx-auto border-b-2 px-4 py-4 sm:px-4">
+        <div id="site-title" class="flex items-center">
+            <a href="/" class="no-underline">
+                <span class="text-3xl text-black0 self-center font-semibold whitespace-nowrap hover:text-strongRed transition-all">Eyon</span>
+            </a>
+        </div>
+        <button onclick="toggleMobileMenu()"type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        <nav class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="\#AboutMe">
+                            About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="/blog">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="
+                         text-black0 
+                        text-lg transition-all
+                        block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50
+                        md:hover:bg-transparent md:border-0  md:p-0 no-underline
+                        "
+                        href="\#Contact">
+                            Contact
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+        <div class="container max-w-screen-xl flex flex-col mx-auto px-4 z-0">
+            <div class="flex flex-col items-center mt-8 w-full md:w-3/5 mx-auto">
+    <h1 class="text-3xl text-center">Using google Apps Script to create a ticketing system</h1>
+    <span class="text-sm text-black2">
+        06 Jan 2023
+        
+            
+             - 
+<a href="/#AboutMe">Francesco Gentile</a>
+
+        
+    </span>
+    <div class="post-content mt-10 container text-base">
+        <p>I have been involved in the organization of several entrepreneurship, tech and web3 events over the last years. Usually most of them on a small budget where paying for a ticketing system was not an option. The most popular option for teams in these settings is to just use Google Forms for inscription and handle the payment manually through messages over email or WhatsApp. This is a very manual process and it is not very scalable. I have been looking for a solution to automate this process for a while and I finally found a way to do it with Google Apps Script.</p>
+
+<h2 id="google-apps-script-google-workspacess-most-powerful-feature">Google Apps Script, Google Workspaces’s most powerful feature</h2>
+
+<p>Google Apps Script is a JavaScript runtime environment that allows you to automate tasks across Google products and third-party services and build web applications. It is a very powerful tool that can be used to automate a lot of tasks. It is also very easy to use and it is free. You can find more information about it <a href="https://developers.google.com/apps-script">here</a>.</p>
+
+<p>Some examples of what you can do with Google Apps Script:</p>
+<ul>
+  <li>Perform actions upon form submission such as sending an email to the user.</li>
+  <li>Fetch external data and use it in your scripts or load it into a spreadsheet or other document.</li>
+  <li>Add custom menus, dialogs, and sidebars to Google Docs, Sheets, Slides, or Forms.</li>
+  <li>Create web apps that run in Google Cloud Platform.</li>
+  <li>Create add-ons for Google Docs, Sheets, Slides, or Forms.</li>
+  <li>Run scripts periodically using triggers.</li>
+</ul>
+
+<p>In short, it takes everything you can do with Google products and puts it on steroids.</p>
+
+<p>Using just this tool you can create a very simple process for signing up people for an event:</p>
+<ol>
+  <li>They fill a form with their information.</li>
+  <li>That gets sent to a spreadsheet.</li>
+  <li>A trigger fires and sends an email with the payment instructions to the user.</li>
+  <li>From there someone could manually check the payments and update the spreadsheet.</li>
+</ol>
+
+<p>This is already an upgrade to what most teams I worked with were doing, and it can be done in a couple of minutes. But I wanted to go a step further and create a ticketing system that would allow me to not even have to check the payments manually. I wanted to be able to just send the payment instructions and have the system automatically check the payments and update the spreadsheet.</p>
+
+<h2 id="mercado-pago">Mercado Pago</h2>
+
+<p>Mercado Pago has so far been the leader of digitalization in personal finances in Latin America. Among its many features, it allows you to create payment links that can be used to receive payments from anyone with multiple payment methods and receive the money in your Mercado Pago account. It also has an API that allows you to automate the process of creating payment links for each user and checking the payments.</p>
+
+<h2 id="the-solution">The solution</h2>
+<p>After a couple iterations I landed upon a process that looks like this:</p>
+
+<ol>
+  <li>They fill a form with their information.</li>
+  <li>That gets sent to a spreadsheet.</li>
+  <li>The script creates a payment link through the Mercado Pago API and sends it to the user via email.</li>
+  <li>Once the user pays, we can redirect them to a “Thank you” page.</li>
+  <li>Periodically the script checks the payments, updates the script and sends an email to the user with the payment confirmation.</li>
+</ol>
+
+<p>In any of those steps you can choose to hook in extra functionality. For one event, we choose to send tickets in the form of NFTs. The things you can do with this are endless.</p>
+
+<p>So, now that we have the process, let’s see how to implement it.</p>
+
+<h2 id="step-by-step">Step by step</h2>
+
+<h3 id="1-create-a-google-form">1. Create a Google Form</h3>
+<p>Go to google drive and navigate to the folder you will be using for the integration and create a new Google Form.
+<img src="/assets/images/GoogleFormsMPIntegration/CreateGoogleForm.png" alt="Google Form" /></p>
+
+<p>Once your’re here, you can add whatever info you want from the user. Just make sure that you are collecting emails so you can send them the payment link.</p>
+
+<h3 id="2-link-a-spreadsheet-to-the-form">2. Link a Spreadsheet to the form</h3>
+<p>Go to the <strong>Responses</strong> tab and click on <strong>Link to Sheets</strong>.</p>
+
+<p><img src="/assets/images/GoogleFormsMPIntegration/LinkSpreadSheet.png" alt="Google Form" /></p>
+
+<p>Once the dialog opens, click on <strong>Create a new spreadsheet</strong> and give it a name.</p>
+
+<p>This spreadsheet will be saved in the same folder as your form and all responses from the form will be saved in it.</p>
+
+<h3 id="3-create-a-google-app-script">3. Create a Google App Script</h3>
+<p>On the top bar, click on the <strong>Extensions</strong> button and then on <strong>Apps Script</strong>.
+<img src="/assets/images/GoogleFormsMPIntegration/LinkAppsScript.png" alt="Google Form" /></p>
+
+<p>This will open a new tab with the Apps Script editor. You will see:</p>
+<ul>
+  <li>A main window for editing code</li>
+  <li>A bar with save, run, debug, function selector and logs on top</li>
+  <li>Sidebar with project files</li>
+  <li>Other sidebar linking to the editor, triggers, executions and settings for the project</li>
+</ul>
+
+<p><img src="/assets/images/GoogleFormsMPIntegration/Overview.png" alt="Google Form" /></p>
+
+<h3 id="create-the-functions-for-emailing">Create the functions for emailing</h3>
+<p>Built into the Apps Script environment there are several Apps ready to be used. One of them is the MailApp. This allows you to send emails from your Google account. We will use this to send the payment link to the user.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sendPaymentEmail</span><span class="p">(</span><span class="nx">email</span><span class="p">,</span> <span class="nx">paymentLink</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">MailApp</span><span class="p">.</span><span class="nx">sendEmail</span><span class="p">({</span>
+    <span class="na">to</span><span class="p">:</span> <span class="nx">email</span><span class="p">,</span>
+    <span class="na">subject</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Payment link</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">htmlBody</span><span class="p">:</span> <span class="s2">`Your payment link is: </span><span class="p">${</span><span class="nx">paymentLink</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the payment confirmation you can do something similar.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sendConfirmationEmail</span><span class="p">(</span><span class="nx">email</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">MailApp</span><span class="p">.</span><span class="nx">sendEmail</span><span class="p">({</span>
+    <span class="na">to</span><span class="p">:</span> <span class="nx">email</span><span class="p">,</span>
+    <span class="na">subject</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Payment confirmed</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">htmlBody</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Your payment has been confirmed</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="creating-the-payment-link">Creating the payment link</h3>
+<p>For creating the payment link we will use the Create Preferece endpoint. <a href="https://www.mercadopago.com.ar/developers/en/reference/preferences/_checkout_preferences/post">You can find the documentation for this endpoint here</a>.</p>
+
+<p>Here is an example for one of the upcoming events:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">generatePaymentPreference</span><span class="p">(</span><span class="nx">externalReference</span><span class="p">)</span> <span class="p">{</span>
+  
+  <span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">items</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Web3Makers Marzo 2023</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">description</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Para más información visita https://web3makers.org</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">picture_url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://www.myapp.com/myimage.jpg</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">category_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">eventos</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">quantity</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">currency_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ARS</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">unit_price</span><span class="dl">"</span><span class="p">:</span> <span class="mi">10</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="dl">"</span><span class="s2">expires</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">date_of_expiration</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2023-03-03T00:00:00.000-03:00</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">external_reference</span><span class="dl">"</span><span class="p">:</span> <span class="nx">externalReference</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">payer</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="nx">externalReference</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">back_urls</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">failure</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://web3makers.org/</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">pending</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://web3makers.org/</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://web3makers.org/</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">additional_info</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://web3makers.org</span><span class="dl">"</span>
+  <span class="p">}</span>
+
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">UrlFetchApp</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">mpApiURL</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">/checkout/preferences</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">post</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">mpApiToken</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="na">payload</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span>
+  <span class="p">})</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentText</span><span class="p">())</span>
+  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">init_point</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The important parts are:</p>
+<ul>
+  <li>The item in the body. This is where you can set the price, the description, the picture, etc.</li>
+  <li>Expiration date</li>
+  <li>The Back URLs for redirection after payment</li>
+  <li>The API token in the headers. You can get this by creating an app in your Mercado Pago account from the <a href="https://www.mercadopago.com.ar/developers/panel">Developer Dashboard</a>.</li>
+</ul>
+
+<p>Then we write another function to check for new payments:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is the column where we store if the user has paid, You'll have to add this column to your spreadsheet</span>
+<span class="kd">const</span> <span class="nx">paymentConfirmationColumn</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">C</span><span class="dl">"</span>
+
+<span class="kd">function</span> <span class="nx">checkPayments</span><span class="p">(){</span>
+
+  <span class="c1">// We use the SpreadsheetApp to get the spreadsheet</span>
+  <span class="kd">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSpreadsheet</span><span class="p">().</span><span class="nx">getSheets</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="c1">// B is the row where the emails are usually stored</span>
+  <span class="c1">// We get a list of all the emails</span>
+  <span class="kd">const</span> <span class="nx">emails</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="dl">"</span><span class="s2">B2:B</span><span class="dl">"</span><span class="p">).</span><span class="nx">getValues</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span><span class="o">=&gt;</span><span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+  <span class="c1">// Docs: https://www.mercadopago.com.ar/developers/en/reference/payments/_payments_search/get</span>
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">UrlFetchApp</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">mpApiURL</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">/v1/payments/search?sort=date_created&amp;criteria=desc</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bearer </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">mpApiToken</span><span class="p">,</span>
+      <span class="p">},</span>
+  <span class="p">})</span>
+
+  <span class="kd">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentText</span><span class="p">()).</span><span class="nx">results</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="nx">payment</span> <span class="k">of</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Get the item</span>
+    <span class="kd">let</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">payment</span><span class="p">.</span><span class="nx">additional_info</span><span class="p">?.</span><span class="nx">items</span>
+    <span class="nx">item</span> <span class="o">=</span> <span class="nx">item</span> <span class="p">?</span> <span class="nx">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">{}</span>
+
+    <span class="c1">// Check if the payment is for the event</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">quantity</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">title</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Web3Makers Marzo 2023</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// This should match with the title of the item in the preference</span>
+
+      <span class="c1">// We first check if we've already registered the payment</span>
+      <span class="kd">let</span> <span class="nx">checkTracking</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="kd">let</span> <span class="nx">positiion</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="p">[</span><span class="nx">i</span><span class="p">,</span><span class="nx">email</span><span class="p">]</span> <span class="k">of</span> <span class="nx">emails</span><span class="p">.</span><span class="nx">entries</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">email</span> <span class="o">===</span> <span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">checkTracking</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">paymentConfirmationColumn</span><span class="p">}${</span><span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">}</span><span class="s2">`</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span> <span class="c1">// 1 to change from 0 to 1 indexed, + 1 to skip header row = 2</span>
+          <span class="nx">position</span> <span class="o">=</span> <span class="nx">i</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">checkTracking</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// If it's paid, then we're up to date (They are ordered by date, so we can stop here)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Done checking recent logs</span><span class="dl">"</span><span class="p">)</span>
+        <span class="k">return</span>
+      <span class="p">}</span>
+
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Found payment for </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">payment</span><span class="p">.</span><span class="nx">external_reference</span><span class="p">)</span>
+      <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">paymentConfirmationColumn</span> <span class="o">+</span> <span class="p">(</span><span class="nx">position</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)).</span><span class="nx">setValue</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">// Set as paid</span>
+      <span class="nx">sendPaymentConfirmationEmail</span><span class="p">(</span><span class="nx">payment</span><span class="p">.</span><span class="nx">external_reference</span><span class="p">)</span> <span class="c1">// You should define this function</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="putting-things-together">Putting things together</h3>
+
+<p>First we create a simple function to be called upon form submission. This will generate the payment link and send it to the user.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onFormSubmit</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">emailAddress</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">namedValues</span><span class="p">[</span><span class="dl">'</span><span class="s1">Email Address</span><span class="dl">'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+  <span class="kd">const</span> <span class="nx">paymentLink</span> <span class="o">=</span> <span class="nx">generatePaymentPreference</span><span class="p">(</span><span class="nx">emailAddress</span><span class="p">)</span>
+  <span class="nx">sendWelcomeEmail</span><span class="p">(</span><span class="nx">emailAddress</span><span class="p">,</span> <span class="nx">paymentLink</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Then we create the triggers. To do this, go the the clock icon on the bar to the left that says “Triggers” upon hovering it. Then click on “Add Trigger”.</p>
+
+<p>For the form submission you can use these settings:</p>
+
+<p><img src="/assets/images/GoogleFormsMPIntegration/FormTrigger.png" alt="Form Trigger" /></p>
+
+<p>And then for checking payments you can set it to run every 5 minutes:</p>
+
+<p><img src="/assets/images/GoogleFormsMPIntegration/PaymentTrigger.png" alt="Payment Trigger" /></p>
+
+<h2 id="thats-it">That’s it!</h2>
+
+<p>Now you can use Google Forms to collect payments for your events. You can also use this to collect payments for other things, like donations, or even to sell products.</p>
+
+<p>This is a very simple implementation, but it demonstrate the power of convenience of Google Apps Script as a tool to build simple applications fast to test new ideas or automate tasks quickly.</p>
+
+    </div>
+    
+</div>
+
+        </div>
+        <footer class="flex flex-col items-center mt-10 text-black2">
+    <div class="md:w-1/3 flex flex-col items-center">
+        <span class="my-1">Francesco Gentile 2022</span>
+        <span class="my-1">Contact: <a href="mailto:francescogentyle@gmail.com" class="no-underline"title="Email">francescogentyle@gmail.com</a></span>
+        <div class="flex flex-row justify-evenly w-full my-2 select-none">
+            
+            <div>
+                <a href="https://www.instagram.com/eyon.dev">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/instagram.svg alt=Instagram title=Instagram>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://twitter.com/eyondev">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/twitter.svg alt=Twitter title=Twitter>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.youtube.com/channel/UCy71OIo4W_8boPSAmqrukvw">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/youtube.svg alt=Youtube title=Youtube>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.twitch.tv/eyon_42">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/twitch.svg alt=Twitch title=Twitch>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://github.com/Eyon42">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/github.svg alt=Github title=Github>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://www.linkedin.com/in/francesco-gentile-907bb4165/">
+                    <img class="w-10" src=https://unpkg.com/simple-icons@latest/icons/linkedin.svg alt=Linked In title=Linked In>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
